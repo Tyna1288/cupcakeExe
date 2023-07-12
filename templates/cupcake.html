@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcake</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/cupcake.css" />
+
+</head>
+
+<body>
+
+{% block content %}
+
+<h1>Cupcake List</h1>
+
+<ul id="cupcakes-list">
+    
+</ul>
+
+<h2>Add a cupcake</h2>
+<form id="new-cupcake-form">
+
+    <div class="form-group row">
+        <label for="form-flavor" class="col-sm-1 col-form-label">Flavor</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="form-flavor" name="flavor" placeholder="Enter a flavor">
+        </div>
+    </div>
+
+    <b></b>
+
+    <div class="form-group row">
+        <label for="form-size" class="col-sm-1 col-form-label">Size</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="form-size" name="size" placeholder="Enter a size">
+        </div>
+    </div>
+
+    <b></b>
+    
+    <div class="form-group row">
+        <label for="form-control-rating" class="col-sm-1 col-form-label">Rating</label>
+        <div class="col-sm-6">
+            <input type="range" min="0" max="10" class="form-control-range" id="form-control-rating" name="rating" placeholder="Rating">
+        </div>
+    </div>
+
+    <b></b>
+
+    <div class="form-group row">
+        <label for="form-image" class="col-sm-1 col-form-label">Image:</label>
+        <div class="col-sm-6">
+            <input type="img" class="form-control" id="form-image" name="image"
+                placeholder="Provide an image">
+        </div>
+    </div>
+
+    <b></b>
+
+    <div class="form-group row">
+        <div class="ml-auto mr-3">
+            <button type="submit" class="btn btn-success">Add</button>
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="../static/cupcake.js"></script>
+
+</body>
+
+</html>
+
+
